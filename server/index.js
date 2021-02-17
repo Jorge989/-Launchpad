@@ -3,7 +3,7 @@ import cors from "cors";
 import http from "http";
 import express from "express";
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3334;
 const HOST = `http://localhost:${PORT}`;
 
 const app = express();
@@ -14,34 +14,19 @@ app.use("/static", express.static(path.resolve(__dirname, "public")));
 app.use("/catalog", (request, response) => {
   const musics = [
     {
-      artist: "Nirvana",
-      name: "Smells like teen spirit",
-      duration: "00:05:01",
-      cover: `${HOST}/static/covers/nirvana_smells_like_teen_spirit.jpg`,
-      url: `${HOST}/static/musics/nirvana_smells_like_teen_spirit.mp3`,
+      artist: "Deep Purple",
+      name: "Smoke On The Water",
+      duration: "00:06:09",
+      cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
+      url: `${HOST}/static/musics/Smoke.mp3`,
     },
     {
-      artist: "Sound1",
-      name: "Sound1",
-      duration: "00:00:03",
-      cover: `${HOST}/static/covers/nirvana_smells_like_teen_spirit.jpg`,
-      url: `${HOST}/static/musics/Sound1.wav`,
+      artist: "Queen of the Stone Age",
+      name: "3's & 7's",
+      duration: "00:06:09",
+      cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
+      url: `${HOST}/static/musics/Queens.mp3`,
     },
-    {
-      artist: "Sound2",
-      name: "Sound2",
-      duration: "00:00:03",
-      cover: `${HOST}/static/covers/nirvana_smells_like_teen_spirit.jpg`,
-      url: `${HOST}/static/musics/Sound2.wav`,
-    },
-    {
-      artist: "Sound3",
-      name: "Sound3",
-      duration: "00:00:03",
-      cover: `${HOST}/static/covers/nirvana_smells_like_teen_spirit.jpg`,
-      url: `${HOST}/static/musics/Sound3.mp3`,
-    },
-    
     {
       artist: "Metallica",
       name: "Nothing else matters",
@@ -50,26 +35,45 @@ app.use("/catalog", (request, response) => {
       url: `${HOST}/static/musics/metallica_nothing_else_matters.mp3`,
     },
     {
-      artist: "Sound4",
-      name: "Sound4",
-      duration: "00:06:29",
+      artist: "KISS",
+      name: "I Was Made For Lovin You",
+      duration: "00:04:33",
       cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
-      url: `${HOST}/static/musics/Sound4.wav`,
+      url: `${HOST}/static/musics/kiss.mp3`,
     },
     {
-      artist: "Sound5",
-      name: "Sound5",
-      duration: "00:06:29",
+      artist: "Nirvana",
+      name: "Smells like teen spirit",
+      duration: "00:05:01",
+      cover: `${HOST}/static/covers/nirvana_smells_like_teen_spirit.jpg`,
+      url: `${HOST}/static/musics/nirvana_smells_like_teen_spirit.mp3`,
+    },
+  
+    {
+      artist: "Black Sabbath",
+      name: "Paranoid",
+      duration: "00:04:28",
       cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
-      url: `${HOST}/static/musics/Sound5.wav`,
+      url: `${HOST}/static/musics/black.mp3`,
+    },
+
+    {
+      artist: "LedZepplin",
+      name: "Black Dog",
+      duration: "00:05:31",
+      cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
+      url: `${HOST}/static/musics/LedZepplin.mp3`,
     },
     {
-      artist: "Sound6",
-      name: "Sound6",
-      duration: "00:06:29",
+      artist: "Jimi Hendrix",
+      name: "Izabella",
+      duration: "00:04:28",
       cover: `${HOST}/static/covers/metallica_nothing_else_matters.jpg`,
-      url: `${HOST}/static/musics/Sound6.wav`,
+      url: `${HOST}/static/musics/Jimi.mp3`,
     },
+  
+   
+   
   ];
 
   return response.json({
@@ -84,4 +88,4 @@ app.use("*", (request, response) =>
 
 const server = http.createServer(app);
 
-server.listen(3333, () => console.log(`Serve is running at ${HOST}`));
+server.listen(3334, () => console.log(`Serve is running at ${HOST}`));
