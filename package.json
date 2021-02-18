@@ -1,0 +1,20 @@
+{
+  "name": "Playsongs",
+  "version": "1.0.0",
+  "description": "Example to show how to play audio using React Js",
+  "main": "index.js",
+  "scripts": {
+    "start": "sucrase-node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorge989/-Launchpad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorge989/-Launchpad/issues"
+  },
+  "homepage": "https://github.com/Jorge989/-Launchpad#readme"
+}
